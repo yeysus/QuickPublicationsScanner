@@ -153,8 +153,8 @@ class PubScanner:
         elif (outputFormat == 'csv'):
             for key, value in _termCounts.items ():
                 outputString += key + "," + value + "\n"
-        elif (outputFormat == 'yaml'):
-            outputString = yaml.dump (_termCounts, width=80, indent=4)
+        #elif (outputFormat == 'yaml'):
+        #    outputString = yaml.dump (_termCounts, width=80, indent=4)
         else:
             # Includes outputFormat == ''
             outputString = "\nOutput format " + outputFormat + " not recognized.\n" 
@@ -190,7 +190,7 @@ class PubScanner:
         print "-o          Output. File name with the results."
         print "            If nothing indicated results will be printed to "
         print "            the standard output."
-        print "-f          Format. Output format. One of json, xml, yaml, csv."
+        print "-f          Format. Output format. One of json, xml, csv."
         print "-d          Debug. Prints some information on the console."
         print "-v          Version. Print version number of this script."
         print "-n          Name. Print name of this script."
